@@ -1,0 +1,37 @@
+CREATE TABLE Usuario (
+    sit int(1),
+    id_usuario int AUTO_INCREMENT PRIMARY KEY,
+    senha varchar(80),
+    nome varchar(80),
+    email varchar(80),
+    usuario varchar(60),
+    numpis varchar(11)
+);
+CREATE TABLE Cliente (
+    Nome varchar(80),
+    CPF int(11),
+    Telefone int(11),
+    E_mail varchar(80),
+    Endereco varchar(150),
+    id_cliente int auto_increment PRIMARY KEY
+);
+CREATE TABLE veiculos (
+    chassi varchar(17),
+    cor varchar(20),
+    preco int(10),
+    fabricante varchar(20),
+    ano int(20),
+    modelo varchar(20),
+    estq int(3),
+    id_veiculos int auto_increment PRIMARY KEY
+);
+CREATE TABLE venda (
+    valortotal int,
+    desconto int(20),
+    formapagamento varchar(20),
+    servicosadicionais varchar(20),
+    id int auto_increment PRIMARY KEY,
+    vendedor int, foreign key (vendedor) references Usuario(id_usuario),
+    cliente int, foreign key (cliente) references  Cliente(id_cliente),
+    veiculos int, foreign key (veiculos) references veiculos(id_veiculos)
+);
