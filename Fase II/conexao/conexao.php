@@ -23,8 +23,6 @@ $senhamd5 = md5($senha);
     $sql-> execute();  
     $sql = $pdo-> prepare("ALTER TABLE `venda` ADD `servicos` varchar(130)");
     $sql-> execute();
-    $sql = $pdo-> prepare("INSERT INTO usuario(sit, senha, nome, usuario) VALUES ('1', '$senhamd5', 'Gerente', 'gerente'))");
-    $sql-> execute();
     $sql = $pdo-> prepare("ALTER TABLE `venda` MODIFY `formapagamento` varchar(60)");
     $sql-> execute();
     $sql = $pdo-> prepare("ALTER TABLE venda DROP desconto");
