@@ -7,8 +7,6 @@ if(isset($_POST['usuario']) && !empty($_POST['usuario']) && isset($_POST['senha'
 
     $usuario =addslashes($_POST['usuario']);
     $senha =addslashes($_POST['senha']);
-    echo $usuario;
-    echo $senha;
 
     if($u->login($usuario, $senha) == true){
         echo $_SESSION['ide'];
