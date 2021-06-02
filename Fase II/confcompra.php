@@ -8,7 +8,6 @@
         $modelo = addslashes($_POST['modelo']);
         $vendedor = addslashes($_POST['vendedor']);
         $u = new Usuario();
-        echo $modelo;
         $_SESSION['ideditar'] = $cliente;
         $mostrar = $u-> mostrarcli();
         $_SESSION['ideditar'] = $modelo;

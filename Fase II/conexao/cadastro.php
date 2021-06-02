@@ -14,9 +14,6 @@
       $numpis =addslashes($_POST['numpis']);
       $nome =addslashes($_POST['nome']);
       $emailf = addslashes($_POST['emailf']);
-      echo $_POST['editar'];
-      echo $valor;
-      echo $usuario;
       if($valor == 'editar'){
         $u-> editar($usuario, $senha, $numpis, $nome, $emailf);
         echo  "<script language='javascript' type='text/javascript'>
@@ -77,8 +74,6 @@
     $modelo =addslashes($_POST['modelo']);
     $cor = addslashes($_POST['cor']);
     $estq = addslashes($_POST['estq']);
-    echo $chassi;
-    echo $valor;
     if ($valor== 'editar') {
         $u-> editarveic($chassi, $preco, $fabricante, $ano, $modelo, $cor, $estq);
         echo  "<script language='javascript' type='text/javascript'>
@@ -108,7 +103,6 @@
         echo  "<script language='javascript' type='text/javascript'>
         alert('Senha errada'); window.location.href='../confcompra.php';</script>";
       }else{
-        echo 'senha certa';
       $id_cliente = addslashes($_POST['id_cliente']);
       $id_usuario = addslashes($_POST['id_usuario']);
       $id_veiculos = addslashes($_POST['id_veiculos']);

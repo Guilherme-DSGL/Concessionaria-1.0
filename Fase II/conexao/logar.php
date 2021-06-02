@@ -9,8 +9,7 @@ if(isset($_POST['usuario']) && !empty($_POST['usuario']) && isset($_POST['senha'
     $senha =addslashes($_POST['senha']);
 
     if($u->login($usuario, $senha) == true){
-        echo $_SESSION['ide'];
-        echo $_SESSION['id_usuario'];
+
         echo  "<script language='javascript' type='text/javascript'>
         alert('Usuário Logado'); window.location.href= '../indexsis.php';</script>";
       }else if ($u->login($usuario, $senha) == false) {
