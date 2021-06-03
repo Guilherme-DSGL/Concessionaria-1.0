@@ -184,5 +184,5 @@ $l = 5;
 	$pdf->MultiCell(136,6,$preco,0,10);
 
 $pdf->Output();
-}
+}else{ header("Location: listarcomp.php");}
 ?>
