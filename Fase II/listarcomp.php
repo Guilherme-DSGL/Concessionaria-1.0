@@ -10,7 +10,7 @@ $sql-> execute();
 
 <div class="container">
 <div class="container col-md-6 offset-md-4">
-    <h1>Lista de Gabaritos</h1><br>
+    <h1>Lista de Compras</h1><br>
 </div>
 <table class="table table-hover table table-bordered ">
     <thead class="thead-light">
