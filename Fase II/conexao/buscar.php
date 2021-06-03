@@ -37,7 +37,6 @@ if($num >0){?>
 
       <td>
       <?php 
-      echo $_SESSION['ide'];
           if ($_SESSION['ide']==1) {
           if ($_SESSION['ide']==1 || $_SESSION['ide']==2){?>
           <a href="editar.php?id_usuario=<?php echo $row['id_usuario'];?>" class="btn btn-primary btn-sm">Editar</a>
