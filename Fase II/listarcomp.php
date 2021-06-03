@@ -28,9 +28,6 @@ $sql-> execute();
         $sql2-> bindValue('id_cliente', $id_cliente);
         $sql2-> execute();
         $comp2 = $sql2-> fetch(); 
-        $_SESSION['cliente'] = $comp['cliente'];
-        $_SESSION['id_usuario'] = $comp['vendedor'];
-        $_SESSION['veiculo'] = $comp['veiculos'];
         ?>
         <tbody>
             <th><?php echo $comp['id'] ?></th>
@@ -39,7 +36,7 @@ $sql-> execute();
             <td><?php echo $comp2['nome'] ?></td>
             </td>
             <td>
-                <a href="boleto.php" target="_blank" class="btn btn-sm btn-warning">Ver</a>
+                <a href="boletolistar.php?id=<?php echo $comp['id'];?>" target="_blank" class="btn btn-sm btn-warning">Ver</a>
             </td>
         </tbody>
     <?php } ?>
