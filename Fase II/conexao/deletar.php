@@ -39,6 +39,15 @@
         $sql->execute();
         echo  "<script language='javascript' type='text/javascript'>
         alert('Cliente deletado  e consequentemente as compras cadastradas com ele foram deletadas'); window.location.href='../listarclientes.php';</script>";
+      }else if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $sql = $pdo-> prepare("DELETE FROM venda WHERE id = :id ");
+        $sql-> bindValue('id', $id);
+        $sql->execute();
+        echo  "<script language='javascript' type='text/javascript'>
+        alert('Venda deletada'); window.location.href='../listarcomp.php';</script>";
+      }else{
+          header("Location: ../listarcomp.php");
       }
 
 
