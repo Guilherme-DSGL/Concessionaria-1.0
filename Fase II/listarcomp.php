@@ -37,6 +37,7 @@ $sql-> execute();
             </td>
             <td>
                 <a href="boletolistar.php?id=<?php echo $comp['id'];?>" target="_blank" class="btn btn-sm btn-warning">Ver</a>
+                 <a href="conexao/deletar.php?id=<?php echo $comp['id'];?>" class="btn btn-sm btn-danger">Deletar</a>
             </td>
         </tbody>
     <?php } ?>
